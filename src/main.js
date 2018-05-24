@@ -5,6 +5,7 @@ import App from './App'
 import router from './router'
 import axios from 'axios'
 import store from './store'
+import './icons'
 
 //引入elementui
 import ElementUI from 'element-ui'

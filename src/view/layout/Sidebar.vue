@@ -1,18 +1,27 @@
 <template>
-  <div class="Sidebar">
-    
-    
-  </div>
+  <el-menu mode="vertical" theme="dark" unique-opened  >
+      <sidebar-item :routes="asyncRouterMap"></sidebar-item>
+  </el-menu>
 </template>
 
 <script>
+import {asyncRouterMap} from '@/router'
+import SidebarItem from './SidebarItem'
 export default {
   name: "Sidebar",
-  data() {
-    return {
-      name: "后台页面",
-      msg: ""
-    };
+  components:{
+    SidebarItem
+  },
+  data(){
+    return{
+     asyncRouterMap:asyncRouterMap
+    }
+  },
+  created:()=>{
+    console.log(asyncRouterMap);
+  },
+  computed:{
+    
   }
 };
 </script>

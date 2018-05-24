@@ -24,10 +24,13 @@ export default new Router({
 
 export const asyncRouterMap=[
   {
-    path:"",
+    path:"/programLib",
     component:Layout,
+    name: '方案管理',
+    icon: 'chart',
     children:[
-      
+      { path: 'list', component:'', name: '方案列表' },
+      { path: 'edit', component: '', name: '方案修改' }
     ]
   }
 ]
