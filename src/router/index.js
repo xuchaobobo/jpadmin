@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Layout from '../view/layout/Layout'
 import Login from '../view/login/Login'
 import authrediret from '../view/login/authredirect'
+import List from '../view/programLib/List'
 Vue.use(Router)
 
 export const contantRouterMap=[
@@ -17,10 +18,7 @@ export const contantRouterMap=[
     ]
   }
 ]
-export default new Router({
-  scrollBehavior:()=>({y:0}),
-  routes: contantRouterMap
-})
+
 
 export const asyncRouterMap=[
   {
@@ -29,8 +27,12 @@ export const asyncRouterMap=[
     name: '方案管理',
     icon: 'chart',
     children:[
-      { path: 'list', component:'', name: '方案列表' },
-      { path: 'edit', component: '', name: '方案修改' }
+      { path: 'list', component:List, name: '方案列表' },
+      { path: 'edit', component: List, name: '方案修改' }
     ]
   }
 ]
+export default new Router({
+  scrollBehavior:()=>({y:0}),
+  routes: contantRouterMap.concat(asyncRouterMap)
+})

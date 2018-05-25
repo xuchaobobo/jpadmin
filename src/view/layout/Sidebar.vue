@@ -1,5 +1,5 @@
 <template>
-  <el-menu mode="vertical" theme="dark" unique-opened  >
+  <el-menu mode="vertical" theme="dark" :default-active="$route.path" unique-opened  >
       <sidebar-item :routes="asyncRouterMap"></sidebar-item>
   </el-menu>
 </template>
@@ -14,11 +14,10 @@ export default {
   },
   data(){
     return{
-     asyncRouterMap:asyncRouterMap
+     asyncRouterMap:asyncRouterMap,
     }
   },
   created:()=>{
-    console.log(asyncRouterMap);
   },
   computed:{
     
