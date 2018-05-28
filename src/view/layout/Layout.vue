@@ -1,6 +1,6 @@
 <template>
   <div class="layout">
-    <header>头部</header>
+    <!-- <header>头部</header> -->
     <div class="container">
        <sidebar class="sidebar-container"></sidebar>
         <div class="main">
@@ -34,8 +34,11 @@ export default {
 <style rel="stylesheet/scss" lang="scss" scoped>
 .container{
   display: flex;
+  background-color: #F1F3F9;
   .sidebar-container{
-    width: 180px;
+    width: 280px;
+    background-color: #29313D;
+    height: 100%;
   }
   .main{
     flex: 1

@@ -40,3 +40,15 @@ export default {
   }
 }
 </script>
+<style rel="stylesheet/scss" lang="scss" scoped>
+.el-submenu {
+  .el-submenu__title span{
+    color: white!important;
+    font-size: 1.8em;
+    margin-left: 10px;
+  }
+  .el-menu-item{
+    color: white!important;
+  }
+}
+</style>
