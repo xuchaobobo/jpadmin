@@ -6,6 +6,7 @@
 
 <script>
 import {asyncRouterMap} from '@/router'
+import {mapGetters} from 'vuex'
 import SidebarItem from './SidebarItem'
 export default {
   name: "Sidebar",
@@ -20,7 +21,9 @@ export default {
   created:()=>{
   },
   computed:{
-    
+    ...mapGetters([
+      
+    ])
   }
 };
 </script>

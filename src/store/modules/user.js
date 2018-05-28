@@ -33,6 +33,7 @@ const user = {
                 loginByUsername(username,userinfo.password)
                 .then(response=>{
                     const data=response.data;
+                    console.log(data);
                     resolve()
                 }).catch(error=>{
                     rejects(error);

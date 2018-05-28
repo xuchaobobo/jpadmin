@@ -25,7 +25,17 @@ export const asyncRouterMap=[
     path:"/programLib",
     component:Layout,
     name: '方案管理',
-    icon: 'chart',
+    icon: 'toux',
+    children:[
+      { path: 'list', component:List, name: '方案列表' },
+      { path: 'edit', component: List, name: '方案修改' }
+    ]
+  },
+  {
+    path:"/programLib",
+    component:Layout,
+    name: '素材库',
+    icon: 'toux',
     children:[
       { path: 'list', component:List, name: '方案列表' },
       { path: 'edit', component: List, name: '方案修改' }
